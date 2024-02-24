@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+
+
+
+    <!-- logo montez font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+
+    <!--fonts for subheading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montez&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <!-- TODO: Include all your code for the header and home page here -->
+
+    <!-- Logo and signup/signin part -->
+    <div class="header">
+        <div class="logo">
+            <h1 class="scribblertext">Scribbler</h1>
+
+            <div class="subheading">
+                <p>Explore, Imagine, Create</p>
+            </div>
+        </div>
+
+        <div class="signingbuttons">
+            <button type="button" class="signup" onclick="showsignupform()">Sign Up</button>
+            <button type="button" class="signin" onclick="showsigninform()">Sign In</button>
+        </div>
+    </div>
+
+    <!-- Posts button part -->
+    <div class="posts">
+        <button type="button" class="allpost"> <a style="text-decoration: none; color: inherit;"
+                href="html/postslist.html">All Posts</a> </button>
+        <button type="button" class="createpost" onclick="showcreateform()">Create Post</button>
+    </div>
+
+    <!--signup form-->
+    <div class="overlay"> </div>
+    <div class="signupform">
+        <p>Get started</p>
+        <span class="crosslogo" onclick="removesignupform()">&times;</span>
+        <hr>
+        <div>
+            <form action="">
+                <!-- -->
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter your name" name="name" required>
+
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Enter your Username" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Enter your Password" required>
+
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" name="confirmpassword" placeholder="Re-enter your Password" required>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="signinform">
+        <p>Welcome Back!</p>
+        <span class="crosslogo" onclick="removesigninform()">&times;</span>
+        <hr>
+        <form action="">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your Username" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your Password" required>
+            </div>
+    
+            <button>Sign In</button>
+        </form>
+        <h4>Not a member? <a onclick="showsignupform2()">Sign Up</a> </h4>
+    </div>
+
+
+    <div class="createpostpopup">
+        <p>Pen Your Post</p>
+        <span class="crosslogo" onclick="removecreateform()">&times;</span>
+        <hr>
+        <div>
+            <label for="tittle">Title</label>
+            <input type="text" id="tittle" placeholder="Enter title of your post">
+        </div>
+        <div class="content-writing-section">
+            <label for="contents">Contents</label>
+            <textarea name="text" id="contents" cols="30" rows="10"
+                placeholder="Enter the contents of your post"></textarea>
+        </div>
+        <div class="createbutton"> <button>Create</button></div>
+
+    </div>
+
+    <script src="script/index.js"></script>
+</body>
+
+</html>
